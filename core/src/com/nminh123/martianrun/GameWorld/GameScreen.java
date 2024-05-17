@@ -1,16 +1,17 @@
-package com.nminh123.martianrun;
+package com.nminh123.martianrun.GameWorld;
 
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.nminh123.martianrun.stages.GameStage;
 import com.badlogic.gdx.Gdx;
 public class GameScreen implements Screen{
-    private GameStage stage;
+    private final GameStage stage;
 
     public GameScreen()
     {
         stage = new GameStage();
     }
+
     @Override
     public void show() {
 

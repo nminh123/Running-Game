@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.nminh123.martianrun.MartianRun;
+import com.nminh123.martianrun.GameWorld.MartianRun;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
