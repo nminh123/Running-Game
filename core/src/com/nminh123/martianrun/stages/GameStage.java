@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.utils.Array;
 import com.nminh123.martianrun.utils.BodyUtils;
+import com.nminh123.martianrun.utils.Constants;
 import com.nminh123.martianrun.utils.WorldUtils;
 import com.nminh123.martianrun.actors.Ground;
 import com.nminh123.martianrun.actors.Runner;
@@ -18,10 +19,13 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.nminh123.martianrun.actors.Enemy;
+import com.badlogic.gdx.utils.Scaling;
+import com.badlogic.gdx.utils.viewport.ScalingViewport;
+import com.nminh123.martianrun.actors.Background;
 
 public class GameStage extends Stage implements ContactListener {
-    private static final int VIEWPORT_WIDTH = 20;
-    private static final int VIEWPORT_HEIGHT = 13;
+    private static final int VIEWPORT_WIDTH = Constants.APP_WIDTH;
+    private static final int VIEWPORT_HEIGHT = Constants.APP_HEIGHT;
 
 
     private World world;
@@ -43,7 +47,8 @@ public class GameStage extends Stage implements ContactListener {
 
     public GameStage()
     {
-        renderer = new Box2DDebugRenderer();
+        super(new ScalingViewport(Scaling.stretch, VIEWPORT_WIDTH, VIEWPORT_HEIGHT,
+                new OrthographicCamera(VIEWPORT_WIDTH,VIEWPORT_HEIGHT)));
         setUpWorld();
         setupCamera();
         setupTouchControlAreas();
@@ -87,9 +92,15 @@ public class GameStage extends Stage implements ContactListener {
     {
         world = WorldUtils.createWorld();
         world.setContactListener(this);
+        setUpBackground();
         setUpGround();
         setUpRunner();
         createEnemy();
+    }
+
+    private void setUpBackground()
+    {
+        addActor(new Background());
     }
 
     @Override
