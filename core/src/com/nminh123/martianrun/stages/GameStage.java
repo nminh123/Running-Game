@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.utils.Array;
 import com.nminh123.martianrun.utils.BodyUtils;
 import com.nminh123.martianrun.utils.WorldUtils;
 import com.nminh123.martianrun.actors.Ground;
@@ -16,6 +17,8 @@ import com.nminh123.martianrun.actors.Runner;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.nminh123.martianrun.actors.Enemy;
+
 public class GameStage extends Stage implements ContactListener {
     private static final int VIEWPORT_WIDTH = 20;
     private static final int VIEWPORT_HEIGHT = 13;
@@ -86,6 +89,7 @@ public class GameStage extends Stage implements ContactListener {
         world.setContactListener(this);
         setUpGround();
         setUpRunner();
+        createEnemy();
     }
 
     @Override
@@ -147,6 +151,12 @@ public class GameStage extends Stage implements ContactListener {
     public void act(float delta) {
         super.act(delta);
 
+        Array<Body> bodies = new Array<Body>(world.getBodyCount());
+        world.getBodies(bodies);
+        for(Body body : bodies)
+        {
+            update(body);
+        }
         //Fixed timestep
         accumulator += delta;
 
@@ -157,6 +167,20 @@ public class GameStage extends Stage implements ContactListener {
         }
 
         //TODO: Implement interpolation
+    }
+
+    private void update(Body body) {
+        if (!BodyUtils.bodyInBounds(body)) {
+            if (BodyUtils.bodyIsEnemy(body) && !runner.isHit()) {
+                createEnemy();
+            }
+            world.destroyBody(body);
+        }
+    }
+
+    private void createEnemy() {
+        Enemy enemy = new Enemy(WorldUtils.createEnemy(world));
+        addActor(enemy);
     }
 
     @Override

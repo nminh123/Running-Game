@@ -10,9 +10,9 @@ public class RunnerUserData extends UserData
     private final Vector2 runningPosition = new Vector2(Constants.RUNNER_X, Constants.RUNNER_Y);
     private final Vector2 dodgePosition = new Vector2(Constants.RUNNER_DODGE_X, Constants.RUNNER_DODGE_Y);
 
-    public RunnerUserData()
+    public RunnerUserData(float width, float height)
     {
-        super();
+        super(width, height);
         jumpingLinearImpulse = Constants.RUNNER_JUMPING_LINEAR_IMPULSE;
         userDataType = UserDataType.RUNNER;
     }
@@ -36,5 +36,9 @@ public class RunnerUserData extends UserData
 
     public Vector2 getDodgePosition() {
         return dodgePosition;
+    }
+    public float getHitAngularImpulse()
+    {
+        return Constants.RUNNER_HIT_ANGULAR_IMPULSE;
     }
 }

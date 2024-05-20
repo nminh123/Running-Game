@@ -6,6 +6,7 @@ import com.nminh123.martianrun.box2d.RunnerUserData;
 public class Runner extends GameActor{
     private boolean jumping;
     private boolean dodging;
+    private boolean hit;
 
     public Runner(Body body)
     {
@@ -19,7 +20,7 @@ public class Runner extends GameActor{
 
     public void jump()
     {
-        if(!jumping || dodging)
+        if (!(jumping || dodging || hit))
         {
             body.applyLinearImpulse(getUserData().getJumpingLinearImpulse(),
                     body.getWorldCenter(), true);
@@ -33,18 +34,33 @@ public class Runner extends GameActor{
     }
 
     public void dodge() {
-        if (!jumping) {
-            body.setTransform(getUserData().getDodgePosition(), getUserData().getDodgeAngle());
+        if (!(jumping || hit))
+        {
+            body.setTransform(getUserData().getDodgePosition(),
+                    getUserData().getDodgeAngle());
             dodging = true;
         }
     }
 
     public void stopDodge() {
         dodging = false;
-        body.setTransform(getUserData().getRunningPosition(), 0f);
+        if (!hit) {
+            body.setTransform(getUserData().getRunningPosition(), 0f);
+        }
     }
 
     public boolean isDodging() {
         return dodging;
+    }
+
+    public void hit()
+    {
+        body.applyAngularImpulse(getUserData().getHitAngularImpulse(),true);
+        hit = true;
+    }
+
+    public boolean isHit()
+    {
+        return hit;
     }
 }
