@@ -1,10 +1,9 @@
-package com.nminh123.martianrun.actors.menu;
+package com.nminh123.martianrun.actors.Menu;
 
 import com.badlogic.gdx.math.Rectangle;
 import com.nminh123.martianrun.enums.GameState;
 import com.nminh123.martianrun.utils.Constants;
 import com.nminh123.martianrun.utils.GameManager;
-import com.nminh123.martianrun.actors.Menu.GameButton;
 
 public class AboutButton extends GameButton {
 
