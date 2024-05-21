@@ -109,10 +109,10 @@ public class Runner extends GameActor{
         {
             // Running
             stateTime += Gdx.graphics.getDeltaTime();
-            batch.draw((Texture) runningAnimation.getKeyFrame(stateTime, true),
-                    (float)x,
-                    (float)y,
-                    (float)getWidth(),
+            batch.draw((TextureRegion)runningAnimation.getKeyFrame(stateTime, true),
+                    x,
+                    y,
+                    getWidth(),
                     (float)screenRectangle.getHeight());
         }
     }
