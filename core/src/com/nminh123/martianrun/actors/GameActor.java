@@ -5,6 +5,8 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.nminh123.martianrun.box2d.UserData;
 import java.awt.Rectangle;
 import com.nminh123.martianrun.utils.Constants;
+import com.nminh123.martianrun.utils.GameManager;
+import com.nminh123.martianrun.enums.GameState;
 
 public abstract class GameActor extends Actor {
 
@@ -22,13 +24,20 @@ public abstract class GameActor extends Actor {
     public void act(float delta) {
         super.act(delta);
 
+        if (GameManager.getInstance().getGameState() == GameState.PAUSED) {
+            return;
+        }
+
         if (body.getUserData() != null) {
             updateRectangle();
         } else {
             // This means the world destroyed the body (enemy or runner went out of bounds)
             remove();
         }
+
     }
+
+    public abstract UserData getUserData();
 
     private void updateRectangle() {
         screenRectangle.x = (int) transformToScreen(body.getPosition().x - userData.getWidth() / 2);
@@ -40,7 +49,5 @@ public abstract class GameActor extends Actor {
     protected float transformToScreen(float n) {
         return Constants.WORLD_TO_SCREEN * n;
     }
-
-        public abstract UserData getUserData();
 
 }

@@ -1,11 +1,12 @@
 package com.nminh123.martianrun.actors;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.nminh123.martianrun.utils.Constants;
 import com.badlogic.gdx.graphics.g2d.Batch;
-import com.badlogic.gdx.Gdx;
+import com.nminh123.martianrun.utils.Constants;
+import com.nminh123.martianrun.utils.AssetsManager;
+import com.nminh123.martianrun.utils.GameManager;
+import com.nminh123.martianrun.enums.GameState;
 
 import java.awt.Rectangle;
 
@@ -14,22 +15,28 @@ public class Background extends Actor
     private final TextureRegion textureRegion;
     private Rectangle textureRegionBounds1;
     private Rectangle textureRegionBounds2;
-    private final int speed = 10;
+    private int speed = 100;
 
     public Background() {
-        textureRegion = new TextureRegion(new Texture(Gdx.files.internal(Constants.BACKGROUND_IMAGE_PATH)));
+        textureRegion = AssetsManager.getTextureRegion((Constants.BACKGROUND_ASSETS_ID));
         textureRegionBounds1 = new Rectangle(0 - Constants.APP_WIDTH / 2, 0, Constants.APP_WIDTH, Constants.APP_HEIGHT);
         textureRegionBounds2 = new Rectangle(Constants.APP_WIDTH / 2, 0, Constants.APP_WIDTH, Constants.APP_HEIGHT);
     }
 
     @Override
     public void act(float delta) {
+
+        if (GameManager.getInstance().getGameState() != GameState.RUNNING) {
+            return;
+        }
+
         if (leftBoundsReached(delta)) {
             resetBounds();
         } else {
             updateXBounds(-delta);
         }
     }
+
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);

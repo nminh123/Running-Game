@@ -6,18 +6,6 @@ import com.nminh123.martianrun.enums.UserDataType;
 
 public class BodyUtils
 {
-    public static boolean bodyIsRunner(Body body)
-    {
-        UserData userData = (UserData) body.getUserData();
-        return userData != null && userData.getUserDataType() == UserDataType.RUNNER;
-    }
-
-    public static boolean bodyIsGround(Body body)
-    {
-        UserData userData = (UserData) body.getUserData();
-        return userData != null && userData.getUserDataType() == UserDataType.GROUND;
-    }
-
     public static boolean bodyInBounds(Body body) {
         UserData userData = (UserData) body.getUserData();
 
@@ -34,5 +22,17 @@ public class BodyUtils
         UserData userData = (UserData) body.getUserData();
 
         return userData != null && userData.getUserDataType() == UserDataType.ENEMY;
+    }
+
+    public static boolean bodyIsRunner(Body body) {
+        UserData userData = (UserData) body.getUserData();
+
+        return userData != null && userData.getUserDataType() == UserDataType.RUNNER;
+    }
+
+    public static boolean bodyIsGround(Body body) {
+        UserData userData = (UserData) body.getUserData();
+
+        return userData != null && userData.getUserDataType() == UserDataType.GROUND;
     }
 }

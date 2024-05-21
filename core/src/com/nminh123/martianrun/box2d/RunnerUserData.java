@@ -4,14 +4,13 @@ import com.badlogic.gdx.math.Vector2;
 import com.nminh123.martianrun.enums.UserDataType;
 import com.nminh123.martianrun.utils.Constants;
 
-public class RunnerUserData extends UserData
-{
-    private Vector2 jumpingLinearImpulse;
+public class RunnerUserData extends UserData {
+
     private final Vector2 runningPosition = new Vector2(Constants.RUNNER_X, Constants.RUNNER_Y);
     private final Vector2 dodgePosition = new Vector2(Constants.RUNNER_DODGE_X, Constants.RUNNER_DODGE_Y);
+    private Vector2 jumpingLinearImpulse;
 
-    public RunnerUserData(float width, float height)
-    {
+    public RunnerUserData(float width, float height) {
         super(width, height);
         jumpingLinearImpulse = Constants.RUNNER_JUMPING_LINEAR_IMPULSE;
         userDataType = UserDataType.RUNNER;
@@ -37,8 +36,9 @@ public class RunnerUserData extends UserData
     public Vector2 getDodgePosition() {
         return dodgePosition;
     }
-    public float getHitAngularImpulse()
-    {
+
+    public float getHitAngularImpulse() {
         return Constants.RUNNER_HIT_ANGULAR_IMPULSE;
     }
+
 }

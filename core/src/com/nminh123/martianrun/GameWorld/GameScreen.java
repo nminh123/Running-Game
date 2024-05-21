@@ -5,16 +5,10 @@ import com.badlogic.gdx.graphics.GL20;
 import com.nminh123.martianrun.stages.GameStage;
 import com.badlogic.gdx.Gdx;
 public class GameScreen implements Screen{
-    private final GameStage stage;
+    private GameStage stage;
 
-    public GameScreen()
-    {
+    public GameScreen() {
         stage = new GameStage();
-    }
-
-    @Override
-    public void show() {
-
     }
 
     @Override
@@ -29,6 +23,17 @@ public class GameScreen implements Screen{
 
     @Override
     public void resize(int width, int height) {
+
+    }
+
+    @Override
+    public void show() {
+
+    }
+
+    @Override
+    public void hide() {
+
     }
 
     @Override
@@ -38,11 +43,6 @@ public class GameScreen implements Screen{
 
     @Override
     public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
 
     }
 
