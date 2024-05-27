@@ -2,6 +2,9 @@ package com.nminh123.martianrun.actors.Menu;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+import com.badlogic.gdx.utils.Align;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -42,8 +45,25 @@ public class Tutorial extends Actor {
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-        batch.draw(textureRegion, bounds.x, bounds.y, bounds.width, bounds.height);
-        font.draw(batch, text, bounds.x, bounds.y, bounds.width,
-                BitmapFont.HAlignment.CENTER);
+
+        // Draw the texture region
+        batch.draw(textureRegion,
+                bounds.x,
+                bounds.y,
+                bounds.width,
+                bounds.height);
+
+        GlyphLayout layout = new GlyphLayout();
+        layout.setText(font,
+                text,
+                Color.WHITE,
+                bounds.width,
+                Align.right,
+                true);
+
+        font.draw(batch,
+                layout,
+                bounds.x,
+                bounds.y + bounds.height);
     }
 }

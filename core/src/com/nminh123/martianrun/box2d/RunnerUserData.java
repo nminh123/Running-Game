@@ -6,8 +6,10 @@ import com.nminh123.martianrun.utils.Constants;
 
 public class RunnerUserData extends UserData {
 
-    private final Vector2 runningPosition = new Vector2(Constants.RUNNER_X, Constants.RUNNER_Y);
-    private final Vector2 dodgePosition = new Vector2(Constants.RUNNER_DODGE_X, Constants.RUNNER_DODGE_Y);
+    private final Vector2 runningPosition = new Vector2(Constants.RUNNER_X,
+            Constants.RUNNER_Y);
+    private final Vector2 dodgePosition = new Vector2(Constants.RUNNER_DODGE_X,
+            Constants.RUNNER_DODGE_Y);
     private Vector2 jumpingLinearImpulse;
 
     public RunnerUserData(float width, float height) {
