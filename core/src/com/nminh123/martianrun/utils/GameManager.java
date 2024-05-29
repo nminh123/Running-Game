@@ -63,9 +63,6 @@ public class GameManager implements GameEventListener {
         gameEventListener.hideAd();
     }
 
-    /**
-     * Submits a score and unlocks a score-based achievement depending on the total
-     */
     @Override
     public void submitScore(int score) {
         gameEventListener.submitScore(score);

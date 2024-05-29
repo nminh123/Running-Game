@@ -17,13 +17,20 @@ public abstract class GameButton extends Button {
         this.bounds = bounds;
         setWidth(bounds.width);
         setHeight(bounds.height);
-        setBounds(bounds.x, bounds.y, bounds.width, bounds.height);
+        setBounds(bounds.x,
+                  bounds.y,
+                  bounds.width,
+                  bounds.height);
         skin = new Skin();
         skin.addRegions(AssetsManager.getTextureAtlas());
         loadTextureRegion();
         addListener(new ClickListener() {
             @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+            public boolean touchDown(InputEvent event,
+                                     float x,
+                                     float y,
+                                     int pointer,
+                                     int button) {
                 touched();
                 loadTextureRegion();
                 return true;

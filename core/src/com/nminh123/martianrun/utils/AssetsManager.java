@@ -22,8 +22,8 @@ public class AssetsManager
 
     }
 
-    public static void loadAssets() {
-
+    public static void loadAssets()
+    {
         // Background
         texturesMap.put(Constants.BACKGROUND_ASSETS_ID,
                 new TextureRegion(new Texture(Gdx.files.internal(Constants.BACKGROUND_IMAGE_PATH))));
@@ -71,8 +71,10 @@ public class AssetsManager
                 textureAtlas.findRegion(Constants.TUTORIAL_RIGHT_REGION_NAME));
 
         // Fonts
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal(Constants.FONT_NAME));
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        FreeTypeFontGenerator generator =
+                new FreeTypeFontGenerator(Gdx.files.internal(Constants.FONT_NAME));
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter =
+                new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 36;
         smallFont = generator.generateFont(parameter);
         smallFont.setColor(.21f, .22f, .21f, 1f);

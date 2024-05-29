@@ -19,8 +19,15 @@ public class Background extends Actor
 
     public Background() {
         textureRegion = AssetsManager.getTextureRegion((Constants.BACKGROUND_ASSETS_ID));
-        textureRegionBounds1 = new Rectangle(0 - Constants.APP_WIDTH / 2, 0, Constants.APP_WIDTH, Constants.APP_HEIGHT);
-        textureRegionBounds2 = new Rectangle(Constants.APP_WIDTH / 2, 0, Constants.APP_WIDTH, Constants.APP_HEIGHT);
+        textureRegionBounds1 = new Rectangle(0 - Constants.APP_WIDTH / 2,
+                0,
+                Constants.APP_WIDTH,
+                Constants.APP_HEIGHT);
+        textureRegionBounds2 = new Rectangle(
+                Constants.APP_WIDTH / 2,
+                0,
+                Constants.APP_WIDTH,
+                Constants.APP_HEIGHT);
     }
 
     @Override
@@ -40,9 +47,16 @@ public class Background extends Actor
     @Override
     public void draw(Batch batch, float parentAlpha) {
         super.draw(batch, parentAlpha);
-        batch.draw(textureRegion, textureRegionBounds1.x, textureRegionBounds1.y, Constants.APP_WIDTH,
+        batch.draw(textureRegion,
+                textureRegionBounds1.x,
+                textureRegionBounds1.y,
+                Constants.APP_WIDTH,
                 Constants.APP_HEIGHT);
-        batch.draw(textureRegion, textureRegionBounds2.x, textureRegionBounds2.y, Constants.APP_WIDTH,
+
+        batch.draw(textureRegion,
+                textureRegionBounds2.x,
+                textureRegionBounds2.y,
+                Constants.APP_WIDTH,
                 Constants.APP_HEIGHT);
     }
 
@@ -57,6 +71,9 @@ public class Background extends Actor
 
     private void resetBounds() {
         textureRegionBounds1 = textureRegionBounds2;
-        textureRegionBounds2 = new Rectangle(Constants.APP_WIDTH, 0, Constants.APP_WIDTH, Constants.APP_HEIGHT);
+        textureRegionBounds2 = new Rectangle(Constants.APP_WIDTH,
+                0,
+                Constants.APP_WIDTH,
+                Constants.APP_HEIGHT);
     }
 }
