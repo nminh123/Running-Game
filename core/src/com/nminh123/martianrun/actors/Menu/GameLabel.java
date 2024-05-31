@@ -30,12 +30,12 @@ public class GameLabel extends Actor {
         GlyphLayout layout = new GlyphLayout();
         layout.setText(font,
                 Constants.GAME_NAME,
-                Color.WHITE,
+                Color.BLACK,
                 bounds.width,
                 Align.center,
                 true);
 
-        float textY = bounds.y + bounds.height / 2 + layout.height / 2;
+        float textY = bounds.y + bounds.height / 4 + layout.height / 4;
         font.draw(batch, layout, bounds.x, textY);
     }
 

@@ -277,7 +277,6 @@ public class GameStage extends Stage implements ContactListener {
         }
 
         //TODO: Implement interpolation
-
     }
 
     private void update(Body body) {
@@ -361,12 +360,6 @@ public class GameStage extends Stage implements ContactListener {
         return screenLeftSide.contains(x, y);
     }
 
-    /**
-     * Helper function to get the actual coordinates in my world
-     *
-     * @param x
-     * @param y
-     */
     private void translateScreenToWorldCoordinates(int x, int y) {
         getCamera().unproject(touchPoint.set(x, y, 0));
     }

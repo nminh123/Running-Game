@@ -43,23 +43,15 @@ public class Score extends Actor {
         if (getScore() == 0) {
             return;
         }
-        String scoreText = String.format("%d", score);
-        // Create a GlyphLayout
+        String scoreText = String.format("%f", score);
         GlyphLayout layout = new GlyphLayout();
 
-        // Set the text with right alignment
         layout.setText(font,
                 scoreText,
-                Color.WHITE,
+                Color.BLACK,
                 bounds.width,
                 Align.right,
                 true);
-        /*font.draw(batch,
-                String.format("%d", getScore()),
-                bounds.x,
-                bounds.y,
-                bounds.width,
-                Glyph.RIGHT);*/
         font.draw(batch, layout, bounds.x, bounds.y + layout.height);
     }
 

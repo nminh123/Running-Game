@@ -20,8 +20,10 @@ public class Ground extends GameActor
     public Ground(Body body) {
         super(body);
         textureRegion = AssetsManager.getTextureRegion(Constants.GROUND_ASSETS_ID);
-        textureRegionBounds1 = new Rectangle(0 - getUserData().getWidth() / 2, 0, getUserData().getWidth(),
-                getUserData().getHeight());
+        textureRegionBounds1 = new Rectangle(0 - getUserData().getWidth() / 2,
+                                             0,
+                                                getUserData().getWidth(),
+                                                getUserData().getHeight());
         textureRegionBounds2 = new Rectangle(getUserData().getWidth() / 2, 0, getUserData().getWidth(),
                 getUserData().getHeight());
     }
