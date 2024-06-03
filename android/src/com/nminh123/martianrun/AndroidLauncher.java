@@ -1,10 +1,17 @@
 package com.nminh123.martianrun;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.RelativeLayout;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.Gdx;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.nminh123.martianrun.GameWorld.MartianRun;
 import com.nminh123.martianrun.utils.GameEventListener;
 
@@ -13,7 +20,7 @@ public class AndroidLauncher extends AndroidApplication {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		initialize(new MartianRun(new GameEventListener() {
+		View gameView = initializeForView(new MartianRun(new GameEventListener() {
 			@Override
 			public void displayAd() {
 				Gdx.app.log(GameEventListener.class.getSimpleName(), "displayAd");
@@ -109,5 +116,24 @@ public class AndroidLauncher extends AndroidApplication {
 				return "achievement_500_jump_street";
 			}
 		}), config);
+		RelativeLayout layout = new RelativeLayout(this);
+		layout.addView(gameView, ViewGroup.LayoutParams.MATCH_PARENT,
+				ViewGroup.LayoutParams.MATCH_PARENT);
+
+		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+				ViewGroup.LayoutParams.WRAP_CONTENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT);
+		params.addRule (RelativeLayout.ALIGN_PARENT_TOP);
+		params.addRule (RelativeLayout. CENTER_IN_PARENT);
+
+		AdView bannerAd = new AdView(this);
+		bannerAd.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+		bannerAd.setAdSize(AdSize.BANNER);
+
+		layout.addView(bannerAd,params);
+		setContentView(layout);
+
+		AdRequest ad = new AdRequest.Builder().build();
+		bannerAd.loadAd(ad);
 	}
 }
