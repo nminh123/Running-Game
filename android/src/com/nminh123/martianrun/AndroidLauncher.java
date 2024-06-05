@@ -5,13 +5,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.RelativeLayout;
-
-import com.badlogic.gdx.backends.android.AndroidApplication;
-import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.badlogic.gdx.Gdx;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.badlogic.gdx.backends.android.AndroidApplication;
+import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import com.badlogic.gdx.Gdx;
 import com.nminh123.martianrun.GameWorld.MartianRun;
 import com.nminh123.martianrun.utils.GameEventListener;
 
@@ -116,24 +117,27 @@ public class AndroidLauncher extends AndroidApplication {
 				return "achievement_500_jump_street";
 			}
 		}), config);
+
+		MobileAds.initialize(this, initializationStatus -> {});
+
+		AdView adView = new AdView(this);
+		adView.setAdSize(AdSize.BANNER);
+		adView.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
+
+		AdRequest adRequest = new AdRequest.Builder().build();
+		adView.loadAd(adRequest);
+
 		RelativeLayout layout = new RelativeLayout(this);
-		layout.addView(gameView, ViewGroup.LayoutParams.MATCH_PARENT,
-				ViewGroup.LayoutParams.MATCH_PARENT);
+		layout.addView(gameView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 
-		RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+		RelativeLayout.LayoutParams adParams = new RelativeLayout.LayoutParams(
 				ViewGroup.LayoutParams.WRAP_CONTENT,
-				ViewGroup.LayoutParams.WRAP_CONTENT);
-		params.addRule (RelativeLayout.ALIGN_PARENT_TOP);
-		params.addRule (RelativeLayout. CENTER_IN_PARENT);
+				ViewGroup.LayoutParams.WRAP_CONTENT
+		);
+		adParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		adParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+		layout.addView(adView, adParams);
 
-		AdView bannerAd = new AdView(this);
-		bannerAd.setAdUnitId("ca-app-pub-3940256099942544/6300978111");
-		bannerAd.setAdSize(AdSize.BANNER);
-
-		layout.addView(bannerAd,params);
 		setContentView(layout);
-
-		AdRequest ad = new AdRequest.Builder().build();
-		bannerAd.loadAd(ad);
 	}
 }

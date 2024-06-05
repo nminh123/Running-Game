@@ -1,0 +1,7 @@
+#Wed Jun 05 16:41:50 ICT 2024
+base.0=/Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes.dex
+base.1=/Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

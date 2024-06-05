@@ -1,0 +1,21 @@
+com.nminh123.martianrun.android-play-services-ads-22.6.0-0 /Users/nhatminh/.gradle/caches/transforms-3/0b589afef55e0b9ed9b1304639250731/transformed/play-services-ads-22.6.0/res
+com.nminh123.martianrun.android-ads-adservices-java-1.0.0-beta05-1 /Users/nhatminh/.gradle/caches/transforms-3/0cf3f0deae68cbb09ac039f7951687c7/transformed/ads-adservices-java-1.0.0-beta05/res
+com.nminh123.martianrun.android-play-services-base-18.0.0-2 /Users/nhatminh/.gradle/caches/transforms-3/0d9cc938cffab2ae085c753fbda94d4c/transformed/play-services-base-18.0.0/res
+com.nminh123.martianrun.android-core-1.8.0-3 /Users/nhatminh/.gradle/caches/transforms-3/204cbfb1cc59449266daaddef3d5514f/transformed/core-1.8.0/res
+com.nminh123.martianrun.android-ads-adservices-1.0.0-beta05-4 /Users/nhatminh/.gradle/caches/transforms-3/2ac36358430f06dc91a3c6946ea307ab/transformed/ads-adservices-1.0.0-beta05/res
+com.nminh123.martianrun.android-play-services-ads-lite-22.6.0-5 /Users/nhatminh/.gradle/caches/transforms-3/36d711668f024d04406ea762e3902bde/transformed/play-services-ads-lite-22.6.0/res
+com.nminh123.martianrun.android-lifecycle-runtime-2.3.1-6 /Users/nhatminh/.gradle/caches/transforms-3/650024e0f9cccdeef1169e949f205c94/transformed/lifecycle-runtime-2.3.1/res
+com.nminh123.martianrun.android-coordinatorlayout-1.0.0-7 /Users/nhatminh/.gradle/caches/transforms-3/66f882f1f32ca5e4acbf4b294fd70fdd/transformed/coordinatorlayout-1.0.0/res
+com.nminh123.martianrun.android-startup-runtime-1.0.0-8 /Users/nhatminh/.gradle/caches/transforms-3/ca4f862599bced001f31bcc1439d9a92/transformed/startup-runtime-1.0.0/res
+com.nminh123.martianrun.android-work-runtime-2.7.0-9 /Users/nhatminh/.gradle/caches/transforms-3/ccff23dce1bb92e33939d0b1e00a0c8d/transformed/work-runtime-2.7.0/res
+com.nminh123.martianrun.android-core-ktx-1.8.0-10 /Users/nhatminh/.gradle/caches/transforms-3/d53e939e193b2c87cb6ffee970c66944/transformed/core-ktx-1.8.0/res
+com.nminh123.martianrun.android-play-services-basement-18.2.0-11 /Users/nhatminh/.gradle/caches/transforms-3/d71095e0a8ae0f2a364a8ab13a04953c/transformed/play-services-basement-18.2.0/res
+com.nminh123.martianrun.android-annotation-experimental-1.1.0-12 /Users/nhatminh/.gradle/caches/transforms-3/ee33dd5ca7485f428ba087be89b22fdd/transformed/annotation-experimental-1.1.0/res
+com.nminh123.martianrun.android-browser-1.4.0-13 /Users/nhatminh/.gradle/caches/transforms-3/ee85197757e602694ce44931095e0201/transformed/browser-1.4.0/res
+com.nminh123.martianrun.android-pngs-14 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/generated/res/pngs/debug
+com.nminh123.martianrun.android-resValues-15 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/generated/res/resValues/debug
+com.nminh123.martianrun.android-packageDebugResources-16 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.nminh123.martianrun.android-packageDebugResources-17 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.nminh123.martianrun.android-debug-18 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/merged_res/debug/mergeDebugResources
+com.nminh123.martianrun.android-android-19 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/res
+com.nminh123.martianrun.android-debug-20 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/src/debug/res
