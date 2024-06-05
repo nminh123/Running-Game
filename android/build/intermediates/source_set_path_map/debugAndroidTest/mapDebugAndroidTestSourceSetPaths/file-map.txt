@@ -1,0 +1,4 @@
+com.nminh123.martianrun.test.android-androidTest-0 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/generated/res/resValues/androidTest/debug
+com.nminh123.martianrun.test.android-mergeDebugAndroidTestResources-1 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.nminh123.martianrun.test.android-mergeDebugAndroidTestResources-2 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.nminh123.martianrun.test.android-debugAndroidTest-3 /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
