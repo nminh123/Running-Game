@@ -43,7 +43,7 @@ public class Score extends Actor {
         if (getScore() == 0) {
             return;
         }
-        String scoreText = String.format("%f", score);
+        String scoreText = String.format("Score:\n"+ score);
         GlyphLayout layout = new GlyphLayout();
 
         layout.setText(font,
@@ -52,7 +52,7 @@ public class Score extends Actor {
                 bounds.width,
                 Align.right,
                 true);
-        font.draw(batch, layout, bounds.x, bounds.y + layout.height);
+        font.draw(batch, layout, bounds.x, bounds.y/1.1f + layout.height);
     }
 
     public int getScore() {

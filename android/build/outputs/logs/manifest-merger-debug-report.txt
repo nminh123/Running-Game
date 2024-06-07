@@ -5,7 +5,6 @@ INJECTED from /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/A
 INJECTED from /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/AndroidManifest.xml:2:1-31:12
 INJECTED from /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/AndroidManifest.xml:2:1-31:12
 MERGED from [com.badlogicgames.gdx:gdx-backend-android:1.12.1] /Users/nhatminh/.gradle/caches/transforms-3/b68457abee54143707d8f4ad0e8cf963/transformed/gdx-backend-android-1.12.1/AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/nhatminh/.gradle/caches/transforms-3/feb1c94874bdcbb08db407329f5dfb97/transformed/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-ads:22.6.0] /Users/nhatminh/.gradle/caches/transforms-3/0b589afef55e0b9ed9b1304639250731/transformed/play-services-ads-22.6.0/AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.browser:browser:1.4.0] /Users/nhatminh/.gradle/caches/transforms-3/ee85197757e602694ce44931095e0201/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-ads-lite:22.6.0] /Users/nhatminh/.gradle/caches/transforms-3/36d711668f024d04406ea762e3902bde/transformed/play-services-ads-lite-22.6.0/AndroidManifest.xml:17:1-95:12
@@ -164,8 +163,6 @@ INJECTED from /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/A
 INJECTED from /Users/nhatminh/Documents/Nhật Minh/GitHub/Martian-Run/android/AndroidManifest.xml
 MERGED from [com.badlogicgames.gdx:gdx-backend-android:1.12.1] /Users/nhatminh/.gradle/caches/transforms-3/b68457abee54143707d8f4ad0e8cf963/transformed/gdx-backend-android-1.12.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.badlogicgames.gdx:gdx-backend-android:1.12.1] /Users/nhatminh/.gradle/caches/transforms-3/b68457abee54143707d8f4ad0e8cf963/transformed/gdx-backend-android-1.12.1/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/nhatminh/.gradle/caches/transforms-3/feb1c94874bdcbb08db407329f5dfb97/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/nhatminh/.gradle/caches/transforms-3/feb1c94874bdcbb08db407329f5dfb97/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-ads:22.6.0] /Users/nhatminh/.gradle/caches/transforms-3/0b589afef55e0b9ed9b1304639250731/transformed/play-services-ads-22.6.0/AndroidManifest.xml:21:5-23:52
 MERGED from [com.google.android.gms:play-services-ads:22.6.0] /Users/nhatminh/.gradle/caches/transforms-3/0b589afef55e0b9ed9b1304639250731/transformed/play-services-ads-22.6.0/AndroidManifest.xml:21:5-23:52
 MERGED from [androidx.browser:browser:1.4.0] /Users/nhatminh/.gradle/caches/transforms-3/ee85197757e602694ce44931095e0201/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
