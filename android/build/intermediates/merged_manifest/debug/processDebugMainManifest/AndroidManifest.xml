@@ -40,7 +40,6 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appCategory="game"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -50,6 +49,7 @@
         android:icon="@drawable/ic_launcher"
         android:isGame="true"
         android:label="@string/app_name"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.nminh123.martianrun.AndroidLauncher"
