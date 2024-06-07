@@ -21,6 +21,102 @@ public class AndroidLauncher extends AndroidApplication {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
+//		initialize(new MartianRun(new GameEventListener() {
+//			@Override
+//			public void displayAd() {
+//
+//			}
+//
+//			@Override
+//			public void hideAd() {
+//
+//			}
+//
+//			@Override
+//			public void submitScore(int score) {
+//
+//			}
+//
+//			@Override
+//			public void displayLeaderboard() {
+//
+//			}
+//
+//			@Override
+//			public void displayAchievements() {
+//
+//			}
+//
+//			@Override
+//			public void share() {
+//
+//			}
+//
+//			@Override
+//			public void unlockAchievement(String id) {
+//
+//			}
+//
+//			@Override
+//			public void incrementAchievement(String id, int steps) {
+//
+//			}
+//
+//			@Override
+//			public String getGettingStartedAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String getLikeARoverAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String getSpiritAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String getCuriosityAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get5kClubAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get10kClubAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get25kClubAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get50kClubAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get10JumpStreetAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get100JumpStreetAchievementId() {
+//				return null;
+//			}
+//
+//			@Override
+//			public String get500JumpStreetAchievementId() {
+//				return null;
+//			}
+//		}));
 		View gameView = initializeForView(new MartianRun(new GameEventListener() {
 			@Override
 			public void displayAd() {
@@ -134,7 +230,7 @@ public class AndroidLauncher extends AndroidApplication {
 				ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT
 		);
-		adParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		adParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
 		adParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		layout.addView(adView, adParams);
 

@@ -7,8 +7,8 @@ import com.nminh123.martianrun.utils.Constants;
 import com.nminh123.martianrun.utils.AssetsManager;
 import com.nminh123.martianrun.utils.GameManager;
 import com.nminh123.martianrun.enums.GameState;
-
-import java.awt.Rectangle;
+import com.badlogic.gdx.math.Rectangle;
+//import java.awt.Rectangle;
 
 public class Background extends Actor
 {
