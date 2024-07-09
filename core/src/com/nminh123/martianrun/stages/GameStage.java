@@ -15,6 +15,7 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Scaling;
 import com.badlogic.gdx.utils.viewport.ScalingViewport;
 import com.nminh123.martianrun.actors.Background;
+import com.nminh123.martianrun.actors.FPS;
 import com.nminh123.martianrun.actors.Ground;
 import com.nminh123.martianrun.actors.Runner;
 import com.nminh123.martianrun.actors.Enemy;
@@ -23,6 +24,8 @@ import com.nminh123.martianrun.actors.Menu.*;
 import com.nminh123.martianrun.utils.*;
 import com.nminh123.martianrun.enums.Difficulty;
 import com.nminh123.martianrun.enums.GameState;
+
+import java.awt.Label;
 
 public class GameStage extends Stage implements ContactListener {
     private static final int VIEWPORT_WIDTH = Constants.APP_WIDTH;
@@ -50,6 +53,7 @@ public class GameStage extends Stage implements ContactListener {
     private AchievementsButton achievementsButton;
 
     private Score score;
+    private FPS fps;
     private float totalTimePassed;
     private boolean tutorialShown;
 
@@ -89,6 +93,7 @@ public class GameStage extends Stage implements ContactListener {
         setUpSound();
         setUpMusic();
         setUpScore();
+        setUpFps();
     }
 
     private void setUpSound() {
@@ -105,6 +110,15 @@ public class GameStage extends Stage implements ContactListener {
                 getCamera().viewportHeight / 10);
         musicButton = new MusicButton(musicButtonBounds);
         addActor(musicButton);
+    }
+
+    private void setUpFps()
+    {
+       Rectangle fpsBounds = new Rectangle(getCamera().viewportWidth * -47 / -64,
+               getCamera().viewportHeight, getCamera().viewportWidth,
+               getCamera().viewportHeight);
+       fps = new FPS(fpsBounds);
+       addActor(fps);
     }
 
     private void setUpScore() {
